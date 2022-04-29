@@ -7,20 +7,21 @@ public class Main {
 
         LinkyList linky = new LinkyList();
 
-        linky.insert(2);
-        linky.insert(4);
-        linky.insert(1);
-        linky.insert(8);
+        linky.insertAtEnd(2);
+        linky.insertAtEnd(4);
+        linky.insertAtEnd(1);
+        linky.insertAtEnd(8);
+
+        linky.insertAtStart(24);
+        linky.insertAt(0, 45);
 
         linky.showList();
 
-//        Node N1 = new Node();
-//
-//
-//        Node N2 = new Node();
-//        Node N3 = new Node();
-//        Node N4 = new Node();
-//        Node N5 = new Node();
+        System.out.println("----");
+        linky.delete(4);
+
+        linky.showList();
+
 
     }
 }
