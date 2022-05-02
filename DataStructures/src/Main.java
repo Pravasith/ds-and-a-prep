@@ -1,10 +1,9 @@
+import DoublyLinkedLists.DoublyLinkyList;
 import LinkedLists.LinkyList;
 import LinkedLists.Node;
 
 public class Main {
-    public static void main(String[] args) {
-//        System.out.println("HELLO WORLD!");
-
+    static void linkyListOps() {
         LinkyList linky = new LinkyList();
 
         linky.insertAtEnd(2);
@@ -17,11 +16,37 @@ public class Main {
 
         linky.showList();
 
-        System.out.println("----");
         linky.delete(4);
 
         linky.showList();
 
+        linky.reverseLinky();
+
+        linky.showList();
+    }
+
+    static void doublyLinkyListOps() {
+        DoublyLinkyList dLinky = new DoublyLinkyList();
+        dLinky.insertAtStart(20);
+        dLinky.insertAtEnd(25);
+        dLinky.insertAtEnd(1);
+        dLinky.insertAtEnd(67);
+
+
+        dLinky.insertAt(2, 82);
+        dLinky.insertAt(0, 90);
+        dLinky.insertAt(6, 91);
+
+        dLinky.showList();
+
+        dLinky.deleteAt(5);
+
+        dLinky.showList();
+    }
+
+    public static void main(String[] args) {
+        linkyListOps();
+        doublyLinkyListOps();
 
     }
 }

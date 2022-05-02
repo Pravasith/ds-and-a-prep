@@ -12,7 +12,6 @@ public class LinkyList {
         if (head == null) {
             head = node;
         } else {
-
             Node current = head;
 
             while (current.next != null
@@ -57,8 +56,6 @@ public class LinkyList {
     }
 
     public void delete(int index) {
-
-
         if (index == 0) {
             head = head.next;
             return;
@@ -76,6 +73,7 @@ public class LinkyList {
         current.next = temp.next;
 
         System.out.println("Deleted index " + index + ", data was " + temp.data);
+        System.out.println("-----------");
 
 //        current.next = current.next.next; --> this can be used too
 
@@ -90,6 +88,20 @@ public class LinkyList {
             node = node.next;
             c++;
         }
+
+        System.out.println("-----------");
     }
 
+    public void reverseLinky() {
+        Node prev = null;
+
+        while (head != null) {
+            Node next = head.next;
+            head.next = prev; // a.b.c.d.. --> b.a
+            prev = head;
+            head = next;
+        }
+
+        head = prev;
+    }
 }
