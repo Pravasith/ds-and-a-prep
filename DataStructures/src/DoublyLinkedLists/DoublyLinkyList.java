@@ -4,6 +4,7 @@ public class DoublyLinkyList {
     Node head;
     Node tail;
 
+
     public void insertAtEnd(int data) {
         Node node = new Node();
         node.data = data;
@@ -92,7 +93,6 @@ public class DoublyLinkyList {
         int c = 0;
 
         while (current != null) {
-
             if (current.prev == null) {
                 System.out.println("Value of " + c + " = " + current.data + " [ " + "null" + ", " + current.data + ", " + current.next.data + " ]");
             } else if (current.next == null) {

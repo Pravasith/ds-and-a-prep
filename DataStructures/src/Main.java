@@ -2,6 +2,8 @@ import DoublyLinkedLists.DoublyLinkyList;
 import LinkedLists.LinkyList;
 import LinkedLists.Node;
 
+import java.util.Vector;
+
 public class Main {
     static void linkyListOps() {
         LinkyList linky = new LinkyList();
@@ -42,11 +44,14 @@ public class Main {
         dLinky.deleteAt(5);
 
         dLinky.showList();
+
     }
 
+
     public static void main(String[] args) {
-        linkyListOps();
+//        linkyListOps();
         doublyLinkyListOps();
+
 
     }
 }
