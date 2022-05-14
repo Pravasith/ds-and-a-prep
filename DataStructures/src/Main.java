@@ -4,6 +4,7 @@ import LinkedLists.Node;
 import Stacks.ArrayStack;
 import Stacks.LinkyStack;
 
+import java.util.Stack;
 import java.util.Vector;
 
 public class Main {
@@ -18,13 +19,13 @@ public class Main {
         linky.insertAtStart(24);
         linky.insertAt(0, 45);
 
-        linky.showList();
+//        linky.showList();
 
         linky.delete(4);
 
         linky.showList();
 
-        linky.reverseLinky();
+        linky.reverseLinkyRecursive(linky.head);
 
         linky.showList();
     }
@@ -99,11 +100,14 @@ public class Main {
 
 
     public static void main(String[] args) {
-//        linkyListOps();
+        linkyListOps();
 //        doublyLinkyListOps();
 
 //        linkyStackOps();
 
-        ArrayStackOps();
+//        ArrayStackOps();
+
+//        Stack<Character> x = new Stack<>();
+
     }
 }

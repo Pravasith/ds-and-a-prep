@@ -1,7 +1,7 @@
 package LinkedLists;
 
 public class LinkyList {
-    Node head;
+    public Node head;
 
     public void insertAtEnd(int data) {
 
@@ -103,5 +103,21 @@ public class LinkyList {
         }
 
         head = prev;
+    }
+
+    public Node reverseLinkyRecursive(Node list) {
+        // [a -> b -> c -> d -> e]
+
+        if (list == null) return null;
+        if (list.next == null) return list;
+
+        Node secondElem = list.next;
+        Node reverseRest = reverseLinkyRecursive(secondElem);
+
+        secondElem.next = list;
+        list.next = null;
+
+        head = reverseRest;
+        return reverseRest;
     }
 }
